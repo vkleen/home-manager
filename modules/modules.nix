@@ -27,7 +27,7 @@ let
     (loadModule ./misc/gtk.nix { })
     (loadModule ./misc/lib.nix { })
     (loadModule ./misc/news.nix { })
-    (loadModule ./misc/nixpkgs.nix { })
+    # (loadModule ./misc/nixpkgs.nix { })
     (loadModule ./misc/numlock.nix { condition = hostPlatform.isLinux; })
     (loadModule ./misc/pam.nix { })
     (loadModule ./misc/qt.nix { })
@@ -160,7 +160,7 @@ let
     config._module.args.pkgs = lib.mkDefault pkgs;
     config._module.check = check;
     config.lib = import ./lib { inherit lib; };
-    config.nixpkgs.system = mkDefault pkgs.system;
+    # config.nixpkgs.system = mkDefault pkgs.system;
   };
 
 in
